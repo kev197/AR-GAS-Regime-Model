@@ -2,7 +2,9 @@
 
 <img width="1086" height="666" alt="image" src="https://github.com/user-attachments/assets/2cfe82b9-3ea9-49dd-a65a-cf46dbf77406" />
 
-The resulting state segmentation of 40-iter EM of HamiltonGAS on SPY. We train on log returns from 2010-01-01 to 2019-01-01 and the test (shown) on 2019-03-01 to 2025-01-01. The colors represent the segmented states learned by the model.
+The resulting state segmentation of 40-iter EM of HamiltonGAS on SPY. We train on log returns from 2010-01-01 to 2019-01-01 and the test (shown) on 2019-03-01 to 2025-01-01. The colors represent the segmented states learned by the model. 
+
+We choose the representative state at each time step by propagating the forward variables and making a forecast on the state at the next, previously unseen, time step. 
 
 Parameters: 
 
