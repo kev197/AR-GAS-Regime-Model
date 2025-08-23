@@ -1,0 +1,23 @@
+project_root/
+│── data/
+│   └── raw/          # (optional) downloaded csvs
+│── src/
+│   │── __init__.py
+│   │── data/
+│   │   └── preprocessing.py      # your TA features, log returns, beta calc
+│   │── models/
+│   │   ├── hmm_sklearn.py        # wrapper around hmmlearn.GMMHMM
+│   │   ├── hmm_scratch.py        # your from-scratch Gaussian HMM
+│   │   └── hamilton_ar.py        # regime-switching AR(1) impl
+│   │── strategies/
+│   │   └── long_only.py          # uses regime predictions to trade
+│   │── backtest/
+│   │   └── simulator.py          # takes strategy + model, runs it, logs results
+│   │── viz/
+│   │   └── plots.py              # matplotlib/plotly figs
+│── tests/
+│   ├── test_hmm_scratch.py
+│   ├── test_hamilton_ar.py
+│   └── test_backtest.py
+│── notebooks/                    # for quick exploration
+│── run_experiment.py             # CLI entry point
