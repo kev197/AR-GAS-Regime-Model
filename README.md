@@ -6,6 +6,14 @@ The resulting state segmentation of 40-iter EM of HamiltonGAS on SPY. We train o
 
 We choose the representative state at each time step by propagating the forward variables and making a forecast on the state at the next, previously unseen, time step. 
 
+Model: 
+
+y_t = μ + φ₁y_{t - 1} + φ₂y_{t - 2} + ε
+
+where epsilon is i.i.d. N(0, f_t) and f_t is GAS driven (generalized autoregressive score model) with formula
+
+f_t = ω + As_{t - 1} + Bf_{t - 1}
+
 Parameters: 
 
   State        μ       φ₁       φ₂        ω       A       B
